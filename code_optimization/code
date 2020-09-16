@@ -1,0 +1,33 @@
+class Program
+{
+    private static const string CONNECTION_STRING = "";
+    static void Main()
+    {
+
+        double x = 41.389468;
+        double y = 2.156802;
+        double C = 0.05*0.05;
+        string s = CONNECTION_STRING;
+        SqlConnection c = new SqlConnection(s);
+        c.Open();
+
+        SqlCommand co = new SqlCommand("select * from stores", c);
+        SqlDataAdapter sd = new SqlDataAdapter(co);
+        DataSet ds = new DataSet();
+        sd.Fill(ds);
+        int count = 0;
+
+        for (int i = 0; i < ds.Tables[0].Rows.Count && count < 20; ++i)
+        {
+            /* are we sure it is not better to save files directly in double? */
+            delta_x = (x - Double.Parse(ds.Tables[0].Rows[i]["lat"].ToString()));
+            delta_y = (y - Double.Parse(ds.Tables[0].Rows[i]["lon"].ToString()));
+            if ( delta_x * delta_x + delta_y * delta_y < C)
+            {
+                Console.WriteLine(ds.Tables[0].Rows[i]["name"].ToString() + " " +
+                ds.Tables[0].Rows[i]["street"].ToString());
+                count = count + 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+---
+- hosts:
+   - ansiblemaster
+  become: true
+  roles:
+   - nginx
+  tags: nginx

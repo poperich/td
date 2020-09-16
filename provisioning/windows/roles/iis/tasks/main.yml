@@ -1,0 +1,8 @@
+---
+- name: Copy iss ps script
+  win_copy:
+    src: files/iis.ps1
+    dest: c:\temp\
+
+- name: Run  PowerShell script for IIS
+  win_shell: C:\temp\iis.ps1

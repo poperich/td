@@ -1,0 +1,6 @@
+---
+- hosts:
+   - winserver
+  roles:
+   - iis
+  tags: iis
