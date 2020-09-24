@@ -55,6 +55,6 @@ With the exception of storage services using a proxy such as Nginx, you can thin
 
 
  ### 6. Understand code
- - [refactored code](code_optimization/code.cpp)
+ - [refactored code](code_optimization/code)
  Instead of calculating the distance of the abscissae and the ordinates twice, I created two variables.
  I eliminated the Sqrt calculation by changing the formula.
