@@ -6,7 +6,7 @@
 ## Prepare the environment and document the process
 Use the scipt [install_ansible.sh](ansible_master/install_ansible.sh) for install ansible in a virtual env.
 
-Use the scipt [install_jenkins.sh](ansible_master/install_jenkins.sh) for install jenkins it use the [ansible-playbook](ansible_master/jenkins_ansible/jenkins_palybook.yml).
+Use the scipt [install_jenkins.sh](ansible_master/install_jenkins.sh) for install jenkins it use the [ansible-playbook](ansible_master/jenkins_ansible/jenkins_playbook.yml).
 
 
  ### 1. Create a powershell script for IIS 
